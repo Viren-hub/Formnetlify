@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>index</title>
+    <title>Love Calculator</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,33 +11,56 @@
 </head>
 
 <body class="row">
-    <div class="card col-10 ">
+    <div id="card" class="card col-10 ">
         <div class="card-body">
             <form name="contact" method="POST" data-netlify="true">
                 <h4>Who love you most</h4>
-                <input class="form-control" type="text" name="name" placeholder="Enter Your Name" /><br>
-                <input class="form-control" type="text" name="email" placeholder="Parter Name" /><br>
-                <button class="btn btn-primary button " type="submit">Calculate</button>
-            </form>
+                <input required class="form-control" type="text" id="Partener1" name="Partener 1" placeholder="Enter Your Name" /><br>
+                <input required class="form-control" type="text" id="Partener2" name="Partener 2" placeholder="Partner Name" /><br>
+                <button onclick="myFunction()" class="btn btn-primary button " type="submit">Calculate</button>
+            </form><br>
+            <h4>Send Snapshot to your Love 💕</h4>
+            <div class="rounded-circle">
+                <h2 id="score"></h2>
+            </div>
         </div>
     </div>
+
     <style>
         * {
-            padding: 10px 0 0 30px;
+            padding: 0px 0 0 25px;
+            letter-spacing: 3px;
+            font-family: "Times New Roman", Times, serif;
         }
         
         .card {
             margin-top: 150px;
-            background-image: url(https://cdn2.vectorstock.com/i/1000x1000/29/66/beautiful-red-love-background-with-hearts-and-vector-23562966.jpg);
+            background-image: url(https://media.istockphoto.com/photos/valentine-day-holiday-background-illustration-picture-id622066398?k=6&m=622066398&s=612x612&w=0&h=qtAvxffZiTaKdt23x-7ODW1YTWDAgqEtjbQjxEwuOow=);
             background-repeat: round;
             border: 1px solid #333;
             box-shadow: 10px 10px 5px -2px #888;
+            height: 400px;
+            text-align: center;
         }
         
-        .button {
-            margin-left: 30%;
+        h4 {
+            text-align: center;
         }
     </style>
+    <script>
+        function myFunction() {
+            var komalViren = "100"
+            var FirstName = document.getElementById('Partener1').value;
+            var SecondName = document.getElementById('Partener2').value;
+            if ((FirstName == 'komal' && SecondName == 'viren') || (FirstName == 'Komal' && SecondName == 'Viren') || (FirstName == 'Komal' && SecondName == 'viren') || (FirstName == 'komal' && SecondName == 'Viren')) {
+                document.getElementById("score").innerHTML = komalViren;
+                alert("Inside If")
+            } else {
+                var x = Math.floor((Math.random() * (100 - 50) + 50));
+                document.getElementById("score").innerHTML = x;
+            }
+        }
+    </script>
 </body>
 
 </html>
