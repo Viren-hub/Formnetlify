@@ -7,6 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello Google</h1>
+    <h1>Hello Google</h1>   
+    <li id="demo"></li>
+    <script>
+        var demo=[{
+            'batch':'PPC01',
+            'name':"Dnyaneshwar",
+            'Mo':'8888031552',
+            'Email':'dnyanesh121@gmail.com'
+        },
+        {
+            'batch':'PPC01',
+            'name':"Shubham",
+            'Mo':'8998561215',
+            'Email':'shubham@gmail.com'
+        },
+        {
+            'batch':'PPC01',
+            'name':"virendra",
+            'Mo':'8623018610',
+            'Email':'virendragayakwad11@gmail.com'
+        }]
+       
+        demo.forEach(function(element) {
+            console.log(demo[element]);
+            document.getElementById('demo').innerHTML = demo[1].Email;
+        });
+    </script>
 </body>
 </html>
